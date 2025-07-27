@@ -37,3 +37,24 @@ Streamlit の自由度を活かし、コマンドライン風UIや、`ls`, `cat`
 
 なお、`cve-summary.csv` は 2021年末までに公開されたCVEの情報を元にしています。  
 **収録されているデータ件数が多いため、初回のベクトル生成には少し時間がかかることがあります。**
+
+## 🔧 セットアップ方法
+
+### ■ 開発環境でローカル実行したい場合
+
+```bash
+# 1. レポジトリをクローン
+git clone https://github.com/Limited-Chan/vulnterm.git
+cd vulnterm
+
+# 2. 仮想環境を作って依存関係をインストール（推奨）
+python -m venv venv
+source venv/bin/activate  # Windows の場合は venv\Scripts\activate
+pip install -r requirements.txt
+
+# 3. CVEベクトルデータを生成（初回のみ）
+python make_vactors.py
+
+# 4. Streamlit アプリ起動
+streamlit run CVE.py
+```
