@@ -1,0 +1,7 @@
+data/
+*.npy
+*.tar.gz
+*.pkl
+*.h5
+__pycache__/
+*.log
